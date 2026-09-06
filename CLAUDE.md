@@ -18,3 +18,10 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## GitHubリポジトリ
 
 https://github.com/komoyasan/quiz-app
+
+## Git運用ルール
+
+- コードを変更したら、そのたびに commit してGitHubへ push すること(変更を溜め込まず、都度反映する)。
+- commit メッセージは変更内容が分かるように簡潔に日本語で書く。
+- push 先はリモート `origin` の `main` ブランチとする。
+- force push など破壊的な操作は行わない。
