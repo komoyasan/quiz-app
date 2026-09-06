@@ -1,0 +1,178 @@
+* {
+  box-sizing: border-box;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #eaf1fb;
+  font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+  color: #2b2f38;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("japan-map.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: min(80vmin, 460px) auto;
+  opacity: 0.16;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 480px;
+  padding: 24px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.header h1 {
+  font-size: 1.6rem;
+  margin: 0 0 8px;
+}
+
+.progress {
+  margin: 0;
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+.quiz-box,
+.result-box {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.question {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: 0 0 20px;
+  line-height: 1.6;
+}
+
+.choices {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.choice-btn {
+  padding: 12px 16px;
+  font-size: 1rem;
+  text-align: left;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background-color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.choice-btn:hover:not(:disabled) {
+  background-color: #eff6ff;
+  border-color: #2563eb;
+}
+
+.choice-btn:disabled {
+  cursor: default;
+}
+
+.choice-btn.correct {
+  background-color: #dcfce7;
+  border-color: #22c55e;
+  color: #15803d;
+  font-weight: bold;
+}
+
+.choice-btn.incorrect {
+  background-color: #fee2e2;
+  border-color: #ef4444;
+  color: #b91c1c;
+  font-weight: bold;
+}
+
+.feedback {
+  min-height: 1.4rem;
+  margin: 16px 0 0;
+  font-weight: bold;
+  text-align: center;
+}
+
+.feedback.correct {
+  color: #15803d;
+}
+
+.feedback.incorrect {
+  color: #b91c1c;
+}
+
+.next-btn {
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #2563eb;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.next-btn:hover {
+  background-color: #1d4ed8;
+}
+
+.result-box {
+  text-align: center;
+}
+
+.result-box h2 {
+  margin: 0 0 12px;
+}
+
+.score {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin: 0 0 8px;
+}
+
+.cheer-label {
+  margin: 0 0 6px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #2563eb;
+  letter-spacing: 0.05em;
+}
+
+.score-comment {
+  color: #1e3a8a;
+  background-color: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin: 0 0 20px;
+  line-height: 1.6;
+}
