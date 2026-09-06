@@ -14,3 +14,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 - ビルドツール・パッケージマネージャを導入していない限り、`npm install` や `npm run build` などのコマンドは存在しない。ファイルを追加してビルド/実行手順が生まれた場合は、このファイルの「コマンド」セクションを追記・更新すること。
 - ブラウザで直接 `index.html` を開く、または簡易HTTPサーバー(例: VSCodeのLive Server拡張など)で動作確認する構成を想定している。
+
+## GitHubリポジトリ
+
+https://github.com/komoyasan/quiz-app
